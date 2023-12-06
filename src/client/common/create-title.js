@@ -16,9 +16,10 @@ export default (res = {}) => {
   } = res
   const fixTitle = `${username || ''}@${host}:${port}`
   const extra = host || path ? (path || fixTitle) : ''
-  let f = title
+  /*let f = title
     ? `${title}` + (extra ? ` - ${extra}` : '')
-    : extra
+    : extra*/
+  let f = title
   if (connectionHoppings && connectionHoppings.length) {
     f = `[⋙]${f}`
   }

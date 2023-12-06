@@ -118,14 +118,14 @@ export default class Sidebar extends Component {
           <div className='control-icon-wrap'>
             <MenuBtn store={store} config={store.config} />
           </div>
-          <SideIcon
+         {/* <SideIcon
             title={e('newBookmark')}
           >
             <PlusCircleOutlined
               className='font22 iblock control-icon'
               onClick={onNewSsh}
             />
-          </SideIcon>
+          </SideIcon>*/}
           <SideIcon
             title={c(settingMap.bookmarks)}
             active={bookmarksActive}
@@ -137,7 +137,7 @@ export default class Sidebar extends Component {
               className='font20 iblock control-icon'
             />
           </SideIcon>
-          <SideIcon
+         {/* <SideIcon
             title={c(settingMap.history)}
             active={historyActive}
           >
@@ -147,9 +147,9 @@ export default class Sidebar extends Component {
               onClick={onClickHistory}
               className='font20 iblock control-icon'
             />
-          </SideIcon>
+          </SideIcon>*/}
           <TransferList store={store} />
-          <SideIcon
+          {/*<SideIcon
             title={t(settingMap.terminalThemes)}
             active={themeActive}
           >
@@ -157,7 +157,7 @@ export default class Sidebar extends Component {
               className='font20 iblock pointer control-icon'
               onClick={openTerminalThemes}
             />
-          </SideIcon>
+          </SideIcon>*/}
           <SideIcon
             title={c(settingMap.setting)}
             active={settingActive}
