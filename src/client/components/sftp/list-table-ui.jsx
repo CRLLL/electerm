@@ -125,19 +125,35 @@ export default class FileListTable extends React.Component {
       if (i === length - 1) {
         return prev
       }
-      return [
-        ...prev,
-        {
-          id: generate(),
-          prevProp: name,
-          nextProp: properties[i + 1].name,
-          style: {
-            left: (w * (i + 1) - (splitDraggerWidth / 2)) + 'px',
-            width: splitDraggerWidth + 'px',
-            zIndex: 4 + i * 2
+      if(i === 1){
+        return [
+          ...prev,
+          {
+            id: generate(),
+            prevProp: name,
+            nextProp: properties[i + 1].name,
+            style: {
+              left: (w * (i + 1) - (splitDraggerWidth / 2) + 100) + 'px', //名称列宽度增加100px
+              width: splitDraggerWidth + 'px',
+              zIndex: 4 + i * 2
+            }
           }
-        }
-      ]
+        ]
+      }else{
+        return [
+          ...prev,
+          {
+            id: generate(),
+            prevProp: name,
+            nextProp: properties[i + 1].name,
+            style: {
+              left: (w * (i + 1) - (splitDraggerWidth / 2)) + 'px',
+              width: splitDraggerWidth + 'px',
+              zIndex: 4 + i * 2
+            }
+          }
+        ]
+      }
     }, [])
     return {
       pageSize: 100,
