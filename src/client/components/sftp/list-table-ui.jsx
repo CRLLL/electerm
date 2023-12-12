@@ -125,7 +125,8 @@ export default class FileListTable extends React.Component {
       if (i === length - 1) {
         return prev
       }
-      if(i === 1){
+
+      if(i === 0){
         return [
           ...prev,
           {
