@@ -88,15 +88,38 @@ export default class FileListTable extends React.Component {
     const padding = 5
     const w = (width - padding * 2) / length
     const properties = pps.map((name, i) => {
-      return {
-        name,
-        id: generate(),
-        style: {
-          width: w + 'px',
-          left: (w * i) + 'px',
-          zIndex: 3 + i * 2
+      if(i === 0 ){
+        return {
+          name,
+          id: generate(),
+          style: {
+            width: (w + 100) + 'px',  //名称列宽度增加100px
+            left: (w * i) + 'px',
+            zIndex: 3 + i * 2
+          }
+        }
+      }else if(i === 1){
+        return {
+          name,
+          id: generate(),
+          style: {
+            width: (w - 100) + 'px',    //大小列宽度减少100px
+            left: (w * i + 100) +'px', //名称列宽度增加100px
+            zIndex: 3 + i * 2
+          }
+        }
+      }else {
+        return {
+          name,
+          id: generate(),
+          style: {
+            width: w + 'px',
+            left: (w * i) + 'px',
+            zIndex: 3 + i * 2
+          }
         }
       }
+
     })
     const splitHandles = properties.reduce((prev, { name }, i) => {
       if (i === length - 1) {
