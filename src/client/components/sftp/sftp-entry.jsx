@@ -957,7 +957,8 @@ export default class Sftp extends Component {
           `${type}Path`,
           `${type}PathHistory`,
           `${type}InputFocus`,
-          'loadingSftp'
+          'loadingSftp',
+          'id'
         ]
       )
     }
