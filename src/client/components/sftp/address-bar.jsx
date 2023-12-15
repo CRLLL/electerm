@@ -21,6 +21,7 @@ const e = prefix('sftp')
 
 function renderAddonBefore (props, realPath) {
   const {
+    id:bookmarkId,
     type,
     host
   } = props
@@ -53,7 +54,7 @@ function renderAddonBefore (props, realPath) {
       <AddrBookmark
         store={window.store}
         realPath={realPath}
-        host={host}
+        host={bookmarkId}
         type={type}
         onClickHistory={props.onClickHistory}
       />
