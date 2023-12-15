@@ -912,7 +912,7 @@ export default class Sftp extends Component {
     } = this.state
     const arr = this.getFileList(type)
     const loading = this.state[`${type}Loading`]
-    const { _id:bookmarkId,host, username } = this.props.tab
+    const { id:bookmarkId,host, username } = this.props.tab
     const listProps = {
       id,
       type,
