@@ -21,7 +21,7 @@ const e = prefix('sftp')
 
 function renderAddonBefore (props, realPath) {
   const {
-    id:bookmarkId,
+    bookmarkId,
     type,
     host
   } = props
