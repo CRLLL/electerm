@@ -30,6 +30,7 @@ export default class AddrBookmark extends Component {
   }
 
   render () {
+    console.log(this.props)
     const { type, onClickHistory, store, host } = this.props
     // const cls = classnames(
     //   'sftp-history',
