@@ -18,20 +18,21 @@ export default class AddrBookmark extends Component {
 
   handleAddAddr = () => {
     const {
-      store, host, realPath, type
+      store, host, realPath, type,bookmarkId
     } = this.props
     store.addAddressBookmark(
       {
         addr: realPath,
         host: type === typeMap.local ? '' : host,
-        id: uid()
+        id: uid(),
+        bookmarkId: bookmarkId
       }
     )
   }
 
   render () {
-    console.log(this.props)
-    const { type, onClickHistory, store, host } = this.props
+    //console.log(this.props)
+    const { type, onClickHistory, store, host,bookmarkId } = this.props
     // const cls = classnames(
     //   'sftp-history',
     //   'animated',
@@ -40,7 +41,7 @@ export default class AddrBookmark extends Component {
     const addrs = type === typeMap.local
       ? store.addressBookmarksLocal
       : store.addressBookmarks.filter(
-        g => g.host === host
+        g => g.bookmarkId === bookmarkId
       )
     const inner = addrs.length
       ? addrs.map(o => {

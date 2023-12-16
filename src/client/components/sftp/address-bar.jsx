@@ -21,13 +21,13 @@ const e = prefix('sftp')
 
 function renderAddonBefore (props, realPath) {
   const {
-    bookmarkId,
     type,
     host
   } = props
   const isShow = props[`${type}ShowHiddenFile`]
   const title = `${isShow ? e('hide') : e('show')} ${e('hfd')}`
   const Icon = isShow ? EyeFilled : EyeInvisibleFilled
+  const bookmarkId = window.store.currentTab.srcId;
   return (
     <div>
       <Tooltip
@@ -54,8 +54,9 @@ function renderAddonBefore (props, realPath) {
       <AddrBookmark
         store={window.store}
         realPath={realPath}
-        host={bookmarkId}
+        host={host}
         type={type}
+        bookmarkId={bookmarkId}
         onClickHistory={props.onClickHistory}
       />
     </div>
