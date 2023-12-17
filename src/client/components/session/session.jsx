@@ -72,7 +72,7 @@ export default class SessionWrapper extends Component {
     this.state = {
       pid: null,
       enableSftp: false,
-      splitDirection: terminalSplitDirectionMap.horizontal,
+      splitDirection: terminalSplitDirectionMap.vertical,
       activeSplitId,
       key: Math.random(),
       sessionOptions: null,
