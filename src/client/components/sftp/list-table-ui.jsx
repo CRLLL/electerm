@@ -23,6 +23,10 @@ import {
 import copy from 'json-deep-copy'
 import FileSection from './file-item'
 import PagedList from './paged-list'
+import {
+  DownOutlined,
+  UpOutlined
+} from '@ant-design/icons'
 
 const { prefix } = window
 const e = prefix('sftp')
@@ -246,6 +250,9 @@ export default class FileListTable extends React.Component {
           onClick: this.onClickName
         }
     const text = e(name || '')
+    const directionIcon = isSorting
+      ? (sortDirection === 'asc' ? <DownOutlined /> : <UpOutlined />)
+      : null
     return (
       <div
         className={cls}
@@ -256,7 +263,7 @@ export default class FileListTable extends React.Component {
         {...props}
         title={text}
       >
-        {text}
+        {directionIcon} {text}
       </div>
     )
   }
