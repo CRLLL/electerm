@@ -8,8 +8,8 @@ export default function tabTitle (props) {
     ? { color }
     : {}
   return (
-    <span className='tab-title'>
-      <span style={styleTag}>{title}</span>
+    <span className='tab-title' style={styleTag}>
+      {title}
     </span>
   )
 }
