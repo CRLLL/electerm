@@ -42,6 +42,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BUILD_NUMBER: ${{ secrets.BUILD_NUMBER }}
+          CUSTOM_UPLOAD_URL: ${{ secrets.CUSTOM_UPLOAD_URL }}
         run: node build/bin/build-win-nsis
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
