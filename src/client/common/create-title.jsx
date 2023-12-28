@@ -34,6 +34,9 @@ export default function createTitle (res) {
 
 export function createTitleTag (obj) {
   const { color } = obj
+  if (!color) {
+    return null
+  }
   const styleTag = color
     ? { color }
     : {}
