@@ -385,6 +385,9 @@ class Tab extends Component {
     const styleTag = color
       ? { borderTop: `1px solid ${color}` }
       : {}
+    const titleColor = color
+        ? { color }
+        : {}
     return (
       <Tooltip
         title={title}
@@ -418,7 +421,7 @@ class Tab extends Component {
               onClick={this.handleReloadTab}
               title={m('reload')}
             />
-            <span className='tab-title' style={styleTag}>
+            <span className='tab-title' style={titleColor}>
               {title}
             </span>
           </div>
