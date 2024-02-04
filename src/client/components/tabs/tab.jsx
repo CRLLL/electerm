@@ -418,7 +418,7 @@ class Tab extends Component {
               onClick={this.handleReloadTab}
               title={m('reload')}
             />
-            <span className='tab-title'>
+            <span className='tab-title' style={styleTag}>
               {title}
             </span>
           </div>
