@@ -419,7 +419,7 @@ class Tab extends Component {
               title={m('reload')}
             />
             <span className='tab-title'>
-              {tabCount}. {title}
+              {title}
             </span>
           </div>
           <div className={'tab-status ' + status} />
